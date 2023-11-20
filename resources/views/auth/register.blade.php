@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-  <title>Preskool - Register</title>
+  <title>Cozybook Hub - Register</title>
 
   <link rel="shortcut icon" href="assets/img/favicon.png">
 
@@ -36,30 +36,36 @@
               <h1>Sign Up</h1>
               <p class="account-subtitle">Enter details to create your account</p>
 
-              <form action="{{ route('register.perform') }}">
+              <form action="{{ route('register.perform') }}" method="post">
+                @csrf
+                <div class="form-group">
+                  <label>Name <span class="login-danger">*</span></label>
+                  <input name="name" class="form-control" type="text">
+                  <span class="profile-views"><i class="fas fa-user-circle"></i></span>
+                </div>
                 <div class="form-group">
                   <label>Username <span class="login-danger">*</span></label>
-                  <input class="form-control" type="text">
+                  <input name="username" class="form-control" type="text">
                   <span class="profile-views"><i class="fas fa-user-circle"></i></span>
                 </div>
                 <div class="form-group">
                   <label>Email <span class="login-danger">*</span></label>
-                  <input class="form-control" type="text">
+                  <input name="email" class="form-control" type="email">
                   <span class="profile-views"><i class="fas fa-envelope"></i></span>
                 </div>
                 <div class="form-group">
                   <label>Password <span class="login-danger">*</span></label>
-                  <input class="form-control pass-input" type="password">
+                  <input name="password" class="form-control pass-input" type="password">
                   <span class="profile-views feather-eye toggle-password"></span>
                 </div>
                 <div class="form-group">
                   <label>Confirm password <span class="login-danger">*</span></label>
-                  <input class="form-control pass-confirm" type="password">
+                  <input name="password_confirmation" class="form-control pass-confirm" type="password">
                   <span class="profile-views feather-eye reg-toggle-password"></span>
                 </div>
                 <div class=" dont-have">Already Registered? <a href="{{ route('login.show') }}">Login</a></div>
                 <div class="form-group mb-0">
-                  <button class="btn btn-primary btn-block" type="submit">Register</button>
+                  <input class="btn btn-primary btn-block" type="submit" value="Register" />
                 </div>
               </form>
 

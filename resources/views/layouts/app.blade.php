@@ -178,7 +178,13 @@
             </div>
             <a class="dropdown-item" href="profile.html">My Profile</a>
             <a class="dropdown-item" href="inbox.html">Inbox</a>
-            <a class="dropdown-item" href="login.html">Logout</a>
+            @auth
+              <a class="dropdown-item" href="{{ route('logout.perform') }}">Logout</a>  
+            @endauth
+            @guest
+              <a class="dropdown-item" href="{{ route('login.show') }}">Login</a>  
+              <a class="dropdown-item" href="{{ route('register.show') }}">Register</a>  
+            @endguest
           </div>
         </li>
 

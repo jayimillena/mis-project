@@ -43,10 +43,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
         // Home routes
         Route::get('/', [HomeController::class, 'index'])->name('home.index');
+
+        Route::get('/compose', function () {
+            return view('compose');
+        })->name('compose.index');
+        
     });
 });
 
-Route::get('/compose', function () {
-    return view('compose');
-})->name('compose.index');
 

@@ -48,7 +48,7 @@ class LoginController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    protected function authenticated(Request $request, $user) 
+    protected function authenticated(LoginRequest $request, $user) 
     {
         return redirect()->intended();
     }

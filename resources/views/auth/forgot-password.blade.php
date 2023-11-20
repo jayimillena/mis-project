@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-  <title>Preskool - Forgot Password</title>
+  <title>Cozybook Hub - Forgot Password</title>
 
   <link rel="shortcut icon" href="assets/img/favicon.png">
 
@@ -38,10 +38,11 @@
               <h1>Reset Password</h1>
               <p class="account-subtitle">Let Us Help You</p>
 
-              <form action="{{ route('forgotpass.perform') }}">
+              <form action="{{ route('forgotpass.perform') }}" method="post">
+                @csrf
                 <div class="form-group">
                   <label>Enter your registered email address <span class="login-danger">*</span></label>
-                  <input class="form-control" type="text">
+                  <input class="form-control" type="email">
                   <span class="profile-views"><i class="fas fa-envelope"></i></span>
                 </div>
                 <div class="form-group">

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-  <title>Preskool - Login</title>
+  <title>Cozybook Hub - Login</title>
 
   <link rel="shortcut icon" href="assets/img/favicon.png">
 
@@ -37,17 +37,23 @@
             <div class="login-right-wrap">
               <h1>Welcome to Cozybook Hub</h1>
               <p class="account-subtitle">Need an account? <a href="{{ route('register.show') }}">Sign Up</a></p>
+              @if(session()->has('success'))
+                  <div class="alert alert-success">
+                      {{ session()->get('success') }}
+                  </div>
+              @endif
               <h2>Sign in</h2>
 
-              <form action="{{ route('login.perform') }}">
+              <form action="{{ route('login.perform') }}" method="post">
+                @csrf
                 <div class="form-group">
                   <label>Username <span class="login-danger">*</span></label>
-                  <input class="form-control" type="text">
+                  <input name="username" class="form-control" type="text">
                   <span class="profile-views"><i class="fas fa-user-circle"></i></span>
                 </div>
                 <div class="form-group">
                   <label>Password <span class="login-danger">*</span></label>
-                  <input class="form-control pass-input" type="password">
+                  <input name="password" class="form-control pass-input" type="password">
                   <span class="profile-views feather-eye toggle-password"></span>
                 </div>
                 <div class="forgotpass">
@@ -60,7 +66,7 @@
                   <a href="{{ route('forgotpass.show') }}">Forgot Password?</a>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-primary btn-block" type="submit">Login</button>
+                  <input class="btn btn-primary btn-block" type="submit" value="Login" />
                 </div>
               </form>
 
