@@ -36,7 +36,7 @@
               <h1>Sign Up</h1>
               <p class="account-subtitle">Enter details to create your account</p>
 
-              <form action="login.html">
+              <form action="{{ route('register.perform') }}">
                 <div class="form-group">
                   <label>Username <span class="login-danger">*</span></label>
                   <input class="form-control" type="text">
@@ -57,7 +57,7 @@
                   <input class="form-control pass-confirm" type="text">
                   <span class="profile-views feather-eye reg-toggle-password"></span>
                 </div>
-                <div class=" dont-have">Already Registered? <a href="login.html">Login</a></div>
+                <div class=" dont-have">Already Registered? <a href="{{ route('login.show') }}">Login</a></div>
                 <div class="form-group mb-0">
                   <button class="btn btn-primary btn-block" type="submit">Register</button>
                 </div>

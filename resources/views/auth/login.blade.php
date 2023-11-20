@@ -35,11 +35,11 @@
           </div>
           <div class="login-right">
             <div class="login-right-wrap">
-              <h1>Welcome to Preskool</h1>
+              <h1>Welcome to Cozybook Hub</h1>
               <p class="account-subtitle">Need an account? <a href="{{ route('register.show') }}">Sign Up</a></p>
               <h2>Sign in</h2>
 
-              <form action="index.html">
+              <form action="{{ route('login.perform') }}">
                 <div class="form-group">
                   <label>Username <span class="login-danger">*</span></label>
                   <input class="form-control" type="text">
@@ -57,7 +57,7 @@
                       <span class="checkmark"></span>
                     </label>
                   </div>
-                  <a href="forgot-password.html">Forgot Password?</a>
+                  <a href="{{ route('forgotpass.show') }}">Forgot Password?</a>
                 </div>
                 <div class="form-group">
                   <button class="btn btn-primary btn-block" type="submit">Login</button>

@@ -38,7 +38,7 @@
               <h1>Reset Password</h1>
               <p class="account-subtitle">Let Us Help You</p>
 
-              <form action="login.html">
+              <form action="{{ route('forgotpass.perform') }}">
                 <div class="form-group">
                   <label>Enter your registered email address <span class="login-danger">*</span></label>
                   <input class="form-control" type="text">
@@ -48,7 +48,7 @@
                   <button class="btn btn-primary btn-block" type="submit">Reset My Password</button>
                 </div>
                 <div class="form-group mb-0">
-                  <button class="btn btn-primary primary-reset btn-block" type="submit">Login</button>
+                  <a href="{{ route('login.show') }}"><button class="btn btn-primary primary-reset btn-block" type="button">Login</button></a> 
                 </div>
               </form>
 
