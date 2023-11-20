@@ -49,12 +49,12 @@
                 </div>
                 <div class="form-group">
                   <label>Password <span class="login-danger">*</span></label>
-                  <input class="form-control pass-input" type="text">
+                  <input class="form-control pass-input" type="password">
                   <span class="profile-views feather-eye toggle-password"></span>
                 </div>
                 <div class="form-group">
                   <label>Confirm password <span class="login-danger">*</span></label>
-                  <input class="form-control pass-confirm" type="text">
+                  <input class="form-control pass-confirm" type="password">
                   <span class="profile-views feather-eye reg-toggle-password"></span>
                 </div>
                 <div class=" dont-have">Already Registered? <a href="{{ route('login.show') }}">Login</a></div>
