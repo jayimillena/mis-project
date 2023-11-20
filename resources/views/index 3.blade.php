@@ -16,7 +16,7 @@
 <div class="row">
   <div class="col-lg-3 col-md-4">
     <div class="compose-btn">
-      <a href="{{ route('compose.index') }}" class="btn btn-primary btn-block">
+      <a href="" class="btn btn-primary btn-block">
         Compose
       </a>
     </div>
