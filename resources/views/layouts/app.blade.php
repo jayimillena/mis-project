@@ -173,7 +173,6 @@
                             </div>
                         </span>
                     </a>
-                    @auth
                     <div class="dropdown-menu">
                         <div class="user-header">
                             <div class="avatar avatar-sm">
@@ -187,10 +186,11 @@
                         </div>
                         <a class="dropdown-item" href="profile.html">My Profile</a>
                         <a class="dropdown-item" href="inbox.html">Inbox</a>
-                            <li><a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{__('Logout') }}</a></li>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
+                        @auth
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <input type="submit" class="dropdown-item" value="{{__('Logout') }}" />
+                        </form>        
                         @endauth
                     </div>
                 </li>
@@ -218,28 +218,6 @@
                                     class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="students.html">Student List</a></li>
-                                <li><a href="student-details.html">Student View</a></li>
-                                <li><a href="add-student.html">Student Add</a></li>
-                                <li><a href="edit-student.html">Student Edit</a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span
-                                    class="menu-arrow"></span></a>
-                            <ul>
-                                <li><a href="teachers.html">Teacher List</a></li>
-                                <li><a href="teacher-details.html">Teacher View</a></li>
-                                <li><a href="add-teacher.html">Teacher Add</a></li>
-                                <li><a href="edit-teacher.html">Teacher Edit</a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-building"></i> <span> Departments</span> <span
-                                    class="menu-arrow"></span></a>
-                            <ul>
-                                <li><a href="departments.html">Department List</a></li>
-                                <li><a href="add-department.html">Department Add</a></li>
-                                <li><a href="edit-department.html">Department Edit</a></li>
                             </ul>
                         </li>
                         <li class="submenu">
@@ -248,24 +226,7 @@
                             <ul>
                                 <li><a href="subjects.html">Books list</a></li>
                                 <li><a href="add-subject.html">Contribute a resources</a></li>
-                                <li><a href="edit-subject.html">Recommend a modification</a></li>
-                            </ul>
-                        </li>
-                        <li class="submenu">
-                            <a href="#"><i class="fas fa-shield-alt"></i> <span> Authentication </span> <span
-                                    class="menu-arrow"></span></a>
-                            <ul>
-                                @auth
-                                    <li><a class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{__('Logout') }}</a></li>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                    @else
-                                <li><a href="login.html">{{ __('Login') }}</a></li>
-                                <li><a href="register.html">{{ __('Register') }}</a></li>
-                                @endauth
-                                <li><a href="forgot-password.html">{{ __('Forgot Password') }}</a></li>
-                                <li><a href="error-404.html">{{ __('Error Page') }}</a></li>
+                                <li><a href="edit-subject.html">Recommend a books</a></li>
                             </ul>
                         </li>
                         <li>
@@ -276,7 +237,9 @@
             </div>
         </div>
 
-        {{ $slot }}
+        <div class="main-wrapper">
+            {{ $slot }}
+        </div>
 
         <footer>
             <p>Copyright © 2023 CozyBook Hub.</p>
