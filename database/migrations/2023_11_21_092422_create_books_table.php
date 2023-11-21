@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('author')->default('anonymous');
             $table->string('title');
-            $table->blob('content');
+            $table->binary('content');
             $table->foreignId('author_id')->references('id')->on('users')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
