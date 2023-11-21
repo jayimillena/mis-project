@@ -80,10 +80,10 @@
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                         <span class="user-img">
                             <img class="rounded-circle" src="assets/img/profiles/avatar-01.jpg" width="31"
-                                alt="Jay">
+                                alt="Hi">
                             <div class="user-text">
                                 @auth
-                                    <h6>Jay</h6>
+                                    <h6>Hi there</h6>
                                     <p class="text-muted mb-0">{{ __('Book Wizard') }}</p>    
                                 @endauth
                             </div>
@@ -97,7 +97,7 @@
                             </div>
                             <div class="user-text">
                                 @auth
-                                    <h6>Jay</h6>
+                                    <h6>Hi there</h6>
                                     <p class="text-muted mb-0">{{ __('Book Wizard') }}</p>    
                                 @endauth
                             </div>

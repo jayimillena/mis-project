@@ -16,7 +16,8 @@
       <div class="col-lg-8 col-md-8">
         <div class="card">
           <div class="card-body">
-            <form action="inbox.html">
+            <form action="{{ route('publish.store') }}" method="POST">
+              @csrf
               <div class="form-group">
                 <input type="text" name="title" placeholder="Title" class="form-control">
               </div>
@@ -50,7 +51,7 @@
                 <textarea rows="7" name="content" class="form-control summernote" placeholder="Enter your message here"></textarea>
               </div>
               <div class="form-group mb-0">
-                  <x-primary-button class="btn btn-primary align-content-end">
+                  <x-primary-button type="submit" class="btn btn-primary align-content-end">
                     {{ __('Publish the Content') }}
                   </x-primary-button>
               </div>
