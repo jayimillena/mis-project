@@ -20,6 +20,7 @@
 
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/plugins/summernote/summernote-lite.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -124,11 +125,11 @@
                             <a href="#"><i class="fas fa-book-reader"></i> <span>{{ __('Books Available') }}</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="subjects.html">{{ __('Lists') }}</a></li>
+                                <li><a href="subjects.html"></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="blank-page.html"><i class="fas fa-file"></i> <span>{{ __('Publish a Book') }}</span></a>
+                            <a href="{{ route('publish.create') }}"><i class="fas fa-file"></i> <span>{{ __('Publish a Book') }}</span></a>
                         </li>
                     </ul>
                 </div>
@@ -146,6 +147,7 @@
     </div>
 
     <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/plugins/summernote/summernote-lite.min.js"></script>
 
     <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
