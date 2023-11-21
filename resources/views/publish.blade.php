@@ -42,9 +42,18 @@
                   <option value="{{ __('Internet Issues') }}">{{ __('Internet Issues') }}</option> 
                   <option value="{{ __('How to take Care of Computer') }}">{{ __('How to take Care of Computer') }}</option> 
                   <option value="{{ __('Software Applications') }}">{{ __('Software Applications') }}</option> 
+                  <option value="{{ __('Office Productivity Tools') }}">{{ __('Office Productivity Tools') }}</option> 
+                  <option value="{{ __('Google Calendars') }}">{{ __('Google Calendars') }}</option> 
+                  <option value="{{ __('Google Keeps') }}">{{ __('Google Keeps') }}</option> 
+                  <option value="{{ __('Google Reminders') }}">{{ __('Google Reminders') }}</option> 
+                  <option value="{{ __('Google Maps') }}">{{ __('Google Maps') }}</option> 
+                  <option value="{{ __('Introduction to Social Media') }}">{{ __('Introduction to Social Media') }}</option> 
                   <option value="{{ __('Introduction to Multimedia') }}">{{ __('Introduction to Multimedia') }}</option> 
                   <option value="{{ __('Entertainment and Games') }}">{{ __('Entertainment and Games') }}</option> 
                   <option value="{{ __('How to Control Computer Addiction') }}">{{ __('How to Control Computer Addiction') }}</option> 
+                  <option value="{{ __('Basics in Microsoft Word') }}">{{ __('Basics in Microsoft Word') }}</option> 
+                  <option value="{{ __('Basics in Microsoft Excel') }}">{{ __('Basics in Microsoft Excel') }}</option> 
+                  <option value="{{ __('Basics in Microsoft PowerPoint') }}">{{ __('Basics in Microsoft PowerPoint') }}</option> 
                 </select>
               </div>
               <div class="form-group">
