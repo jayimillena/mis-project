@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('books', function (Blueprint $table) {
+        Schema::create('resources', function (Blueprint $table) {
             $table->id();
             $table->string('author')->default('anonymous');
             $table->string('title');
-            $table->binary('content');
+            $table->string('category');
+            $table->string('ebook')->nullable();
+            $table->string('description');
             $table->foreignId('author_id')->references('id')->on('users')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

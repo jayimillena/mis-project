@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
+use App\Http\Requests\ResourceRequest;
+use App\Models\Resource;
 use Illuminate\Http\Request;
 
-class BookController extends Controller
+class ResourceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,15 +27,17 @@ class BookController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ResourceRequest $request)
     {
-        //
+        $savedBook = Resource::create($request->valudated());
+
+        return view('index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Book $book)
+    public function show(Resource $book)
     {
         //
     }
@@ -42,7 +45,7 @@ class BookController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Book $book)
+    public function edit(Resource $book)
     {
         //
     }
@@ -50,7 +53,7 @@ class BookController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Book $book)
+    public function update(Request $request, Resource $book)
     {
         //
     }
@@ -58,7 +61,7 @@ class BookController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Book $book)
+    public function destroy(Resource $book)
     {
         //
     }
