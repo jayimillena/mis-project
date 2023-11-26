@@ -25,35 +25,14 @@
                 <input type="text" name="author" placeholder="Author (optional)" value="" class="form-control">
               </div>
               <div class="form-group">
+                <input type="file" name="author" placeholder="Author (optional)" value="" class="form-control">
+              </div>
+              <div class="form-group">
                 <select name="category" class="form-control">
                   <option value="{{ __('Computer Fundamentals') }}">{{ __('[Choose a Category]') }}</option> 
-                  <option value="{{ __('Computer Fundamentals') }}">{{ __('Computer Fundamentals') }}</option> 
-                  <option value="{{ __('Types of Computers') }}">{{ __('Types of Computers') }}</option> 
-                  <option value="{{ __('Parts of the Computer') }}">{{ __('Parts of the Computer') }}</option> 
-                  <option value="{{ __('Introduction to Computer Hardware') }}">{{ __('Introduction to Computer Hardware') }}</option> 
-                  <option value="{{ __('Introduction to Computer Software') }}">{{ __('Introduction to Computer Software') }}</option> 
-                  <option value="{{ __('Mobilephones as Computer') }}">{{ __('Mobilephones as Computer') }}</option> 
-                  <option value="{{ __('Cloud Service Providers') }}">{{ __('Cloud Service Providers') }}</option> 
-                  <option value="{{ __('Operating System') }}">{{ __('Operating System') }}</option> 
-                  <option value="{{ __('Windows Keyboard Shortcuts') }}">{{ __('Windows Keyboard Shortcuts') }}</option> 
-                  <option value="{{ __('Graphical User Interface') }}">{{ __('Graphical User Interface') }}</option> 
-                  <option value="{{ __('Introduction to Web Browser') }}">{{ __('Introduction to Web Browser') }}</option> 
-                  <option value="{{ __('History of Internet') }}">{{ __('History of Internet') }}</option> 
-                  <option value="{{ __('Internet Issues') }}">{{ __('Internet Issues') }}</option> 
-                  <option value="{{ __('How to take Care of Computer') }}">{{ __('How to take Care of Computer') }}</option> 
-                  <option value="{{ __('Software Applications') }}">{{ __('Software Applications') }}</option> 
-                  <option value="{{ __('Office Productivity Tools') }}">{{ __('Office Productivity Tools') }}</option> 
-                  <option value="{{ __('Google Calendars') }}">{{ __('Google Calendars') }}</option> 
-                  <option value="{{ __('Google Keeps') }}">{{ __('Google Keeps') }}</option> 
-                  <option value="{{ __('Google Reminders') }}">{{ __('Google Reminders') }}</option> 
-                  <option value="{{ __('Google Maps') }}">{{ __('Google Maps') }}</option> 
-                  <option value="{{ __('Introduction to Social Media') }}">{{ __('Introduction to Social Media') }}</option> 
-                  <option value="{{ __('Introduction to Multimedia') }}">{{ __('Introduction to Multimedia') }}</option> 
-                  <option value="{{ __('Entertainment and Games') }}">{{ __('Entertainment and Games') }}</option> 
-                  <option value="{{ __('How to Control Computer Addiction') }}">{{ __('How to Control Computer Addiction') }}</option> 
-                  <option value="{{ __('Basics in Microsoft Word') }}">{{ __('Basics in Microsoft Word') }}</option> 
-                  <option value="{{ __('Basics in Microsoft Excel') }}">{{ __('Basics in Microsoft Excel') }}</option> 
-                  <option value="{{ __('Basics in Microsoft PowerPoint') }}">{{ __('Basics in Microsoft PowerPoint') }}</option> 
+                  @foreach ($categories as $category)
+                    <option value="{{ $category->category }}">{{ $category->category }}</option>   
+                  @endforeach
                 </select>
               </div>
               <div class="form-group">

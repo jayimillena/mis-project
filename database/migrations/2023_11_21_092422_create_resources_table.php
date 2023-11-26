@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('author')->default('anonymous');
             $table->string('title');
-            $table->string('category');
             $table->string('ebook')->nullable();
             $table->string('description');
+            $table->foreignId('category_id')->references('id')->on('resource_categories')->constrained()->onDelete('cascade');
             $table->foreignId('author_id')->references('id')->on('users')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

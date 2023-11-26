@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ResourceRequest;
-use App\Models\Resource;
+use App\Models\{Resource, ResourceCategory};
 use Illuminate\Http\Request;
 
 class ResourceController extends Controller
@@ -21,7 +21,7 @@ class ResourceController extends Controller
      */
     public function create()
     {
-        return view('publish');
+        return view('publish', ['categories' => ResourceCategory::all()]);
     }
 
     /**

@@ -17,4 +17,9 @@ class Resource extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function category()
+    {
+        return $this->hasOne(ResourceCategory::class, 'category_id');
+    }
 }

@@ -122,14 +122,14 @@
                             <span>{{ __('Main Menu') }}</span>
                         </li>
                         <li class="submenu">
-                            <a href="#"><i class="fas fa-book-reader"></i> <span>{{ __('Books Available') }}</span> <span
+                            <a href="#"><i class="fas fa-book-reader"></i> <span>{{ __('Resources Available') }}</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
                                 <li><a href="subjects.html"></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="{{ route('publish.create') }}"><i class="fas fa-file"></i> <span>{{ __('Publish a Book') }}</span></a>
+                            <a href="{{ route('publish.create') }}"><i class="fas fa-file"></i> <span>{{ __('Publish a Resource') }}</span></a>
                         </li>
                     </ul>
                 </div>
