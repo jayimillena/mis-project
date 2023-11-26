@@ -23,6 +23,7 @@ class ResourceRequest extends FormRequest
     {
         return [
             'title' =>  'required|min:5|max:90',
+            'ebook' => 'mimes:mp4,mov,ogg,qt|max:20000',
             'description' => 'required',  
             'author_id' => 'required', 
             'category' => 'required', 
