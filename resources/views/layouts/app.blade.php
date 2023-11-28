@@ -83,7 +83,7 @@
                                 alt="Hi">
                             <div class="user-text">
                                 @auth
-                                    <h6>Hi there</h6>
+                                    <h6>{{ Auth::user()->name }}</h6>
                                     <p class="text-muted mb-0">{{ __('Book Wizard') }}</p>    
                                 @endauth
                             </div>
@@ -97,7 +97,7 @@
                             </div>
                             <div class="user-text">
                                 @auth
-                                    <h6>Hi there</h6>
+                                    <h6>{{ Auth::user()->name }}</h6>
                                     <p class="text-muted mb-0">{{ __('Book Wizard') }}</p>    
                                 @endauth
                             </div>

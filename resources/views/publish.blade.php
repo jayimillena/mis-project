@@ -24,11 +24,16 @@
               <div class="form-group">
                 <input type="text" name="author" placeholder="Author (optional)" value="" class="form-control">
               </div>
+              @auth
+                <div class="form-group">
+                  <input type="hidden" name="author_id" value="{{ Auth::user()->id }}" class="form-control">  
+                </div>
+              @endauth
               <div class="form-group">
-                <input type="file" name="author" placeholder="Author (optional)" value="" class="form-control">
+                <input type="file" name="ebook" placeholder="Author (optional)" value="" class="form-control">
               </div>
               <div class="form-group">
-                <select name="category" class="form-control">
+                <select name="category_id" class="form-control">
                   <option value="{{ __('Computer Fundamentals') }}">{{ __('[Choose a Category]') }}</option> 
                   @foreach ($categories as $category)
                     <option value="{{ $category->category }}">{{ $category->category }}</option>   
@@ -36,7 +41,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <textarea rows="7" name="content" class="form-control summernote" placeholder="Enter your message here"></textarea>
+                <textarea rows="7" name="description" class="form-control summernote" placeholder="Enter your message here"></textarea>
               </div>
               <div class="form-group mb-0">
                   <x-primary-button type="submit" class="btn btn-primary align-content-end">
