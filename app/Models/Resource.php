@@ -10,16 +10,11 @@ class Resource extends Model
     use HasFactory;
 
     protected $fillable = [
-        'author', 'title', 'ebook', 'description', 'author_id', 'category_id',
+        'author', 'title', 'ebook', 'description', 'category_id', 'author_id',
     ];
 
     public function users()
     {
         return $this->belongsTo(User::class, 'user_id');
-    }
-
-    public function category()
-    {
-        return $this->hasOne(ResourceCategory::class, 'category_id');
     }
 }

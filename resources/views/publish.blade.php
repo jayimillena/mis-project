@@ -24,19 +24,19 @@
               <div class="form-group">
                 <input type="text" name="author" placeholder="Author (optional)" value="" class="form-control">
               </div>
+              <div class="form-group">
+                <input type="file" name="ebook" placeholder="Author (optional)" value="" class="form-control">
+              </div>
               @auth
                 <div class="form-group">
                   <input type="hidden" name="author_id" value="{{ Auth::user()->id }}" class="form-control">  
                 </div>
               @endauth
               <div class="form-group">
-                <input type="file" name="ebook" placeholder="Author (optional)" value="" class="form-control">
-              </div>
-              <div class="form-group">
                 <select name="category_id" class="form-control">
                   <option value="{{ __('Computer Fundamentals') }}">{{ __('[Choose a Category]') }}</option> 
                   @foreach ($categories as $category)
-                    <option value="{{ $category->category }}">{{ $category->category }}</option>   
+                    <option value="{{ $category->id }}">{{ $category->category }}</option>   
                   @endforeach
                 </select>
               </div>

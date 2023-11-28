@@ -22,12 +22,12 @@ class ResourceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' =>  'required|min:5|max:90',
-            'author' =>  'required|min:5|max:90',
+            'title' => 'required|min:5|max:90',
+            'author' => 'required|min:5|max:90',
             'ebook' => 'mimes:mp4,mov,ogg,qt|max:20000',
             'description' => 'required',  
-            'category_id' =>  'required',
-            'author_id' =>  'required',
+            'category_id' => 'required|min:1|max:90',
+            'author_id' => 'required|min:1|max:90',
         ];
     }
 }

@@ -29,9 +29,10 @@ class ResourceController extends Controller
      */
     public function store(ResourceRequest $request)
     {
-        $savedBook = Resource::create($request->validated());
+        return 'test';
+        // $savedBook = Resource::create($request->validated());
 
-        return view('index');
+        // return view('index');
     }
 
     /**
