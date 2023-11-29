@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ResourceRequest;
-use App\Models\{Resource, ResourceCategory};
+use App\Models\Resource;
 use Illuminate\Http\Request;
 
 class ResourceController extends Controller
@@ -21,7 +21,7 @@ class ResourceController extends Controller
      */
     public function create()
     {
-        return view('publish', ['categories' => ResourceCategory::all()]);
+        return view('publish', ['resources' => Resource::all()]);
     }
 
     /**
@@ -29,18 +29,19 @@ class ResourceController extends Controller
      */
     public function store(ResourceRequest $request)
     {
-        return 'test';
-        // $savedBook = Resource::create($request->validated());
+        $savedBook = Resource::create($request->validated());
 
-        // return view('index');
+        return view('index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Resource $book)
+    public function show(String $slug)
     {
-        //
+        return view('resource', [
+            'resource' => Resource::where('slug', $slug)->get()
+        ]);
     }
 
     /**

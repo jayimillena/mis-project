@@ -1,4 +1,6 @@
-<x-app-layout>
+@extends('layouts.app')
+@section('title', 'Cozybook Hub')
+@section('section')
   <div class="page-wrapper">
     
     <div class="page-header">
@@ -17,10 +19,11 @@
       <div class="col-lg-11 col-md-10">
         <div class="card">
           <div class="card-body">
+            @include('resource')
           </div>
         </div>
       </div>
     </div>
   </div>
-</x-app-layout>
+@endsection
 

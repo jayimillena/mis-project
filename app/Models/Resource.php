@@ -10,7 +10,7 @@ class Resource extends Model
     use HasFactory;
 
     protected $fillable = [
-        'author', 'title', 'ebook', 'description', 'category_id', 'author_id',
+        'author', 'description', 'title', 'url'
     ];
 
     public function users()

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Cozybook Hub - Login</title>
+    <title>@yield('title')</title>
 
     <link rel="shortcut icon" href="assets/img/favicon.png">
 
@@ -125,11 +125,10 @@
                             <a href="#"><i class="fas fa-book-reader"></i> <span>{{ __('Resources Available') }}</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
-                                <li><a href="subjects.html"></a></li>
+                                @foreach ($resources as $resource)
+                                    <li><a href="{{ route('resource.show', ['slug' => $resource->slug]) }}">{{ $resource->title }}</a></li>    
+                                @endforeach
                             </ul>
-                        </li>
-                        <li>
-                            <a href="{{ route('publish.create') }}"><i class="fas fa-file"></i> <span>{{ __('Publish a Resource') }}</span></a>
                         </li>
                     </ul>
                 </div>
@@ -137,7 +136,7 @@
         </div>
 
         <div class="main-wrapper">
-            {{ $slot }}
+            @yield('section')
         </div>
 
         <footer>

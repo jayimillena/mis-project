@@ -1,7 +1,5 @@
 <x-app-layout>
-
-  <div class="page-wrapper">
-    
+  <div class="page-wrapper">    
     <div class="page-header">
       <div class="row">
         <div class="col">
@@ -32,14 +30,6 @@
                   <input type="hidden" name="author_id" value="{{ Auth::user()->id }}" class="form-control">  
                 </div>
               @endauth
-              <div class="form-group">
-                <select name="category_id" class="form-control">
-                  <option value="{{ __('Computer Fundamentals') }}">{{ __('[Choose a Category]') }}</option> 
-                  @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->category }}</option>   
-                  @endforeach
-                </select>
-              </div>
               <div class="form-group">
                 <textarea rows="7" name="description" class="form-control summernote" placeholder="Enter your message here"></textarea>
               </div>

@@ -28,6 +28,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home.index');
     Route::get('/publish', [ResourceController::class, 'create'])->name('publish.create');
     Route::post('/publish/store', [ResourceController::class, 'store'])->name('publish.store');
+    Route::get('/resource/show/{slug}', [ResourceController::class, 'show'])->name('resource.show');
 });
 
 require __DIR__.'/auth.php';
