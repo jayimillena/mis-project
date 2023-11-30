@@ -14,11 +14,9 @@
     </div>
     
     <div class="row">
-      <div class="col-lg-1 col-md-2">
-      </div>
-      <div class="col-lg-11 col-md-10">
+      <div class="col-lg-12 col-md-12">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body bg-gray-100 p-8">
             @include('resource')
           </div>
         </div>

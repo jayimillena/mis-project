@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/plugins/summernote/summernote-lite.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -119,14 +120,14 @@
                 <div id="sidebar-menu" class="sidebar-menu">
                     <ul>
                         <li class="menu-title">
-                            <span>{{ __('Main Menu') }}</span>
+                            <span>{{ __('Special thanks to') }}</span>
                         </li>
                         <li class="submenu">
-                            <a href="#"><i class="fas fa-book-reader"></i> <span>{{ __('Resources Available') }}</span> <span
+                            <a href="#"><i class="fas fa-book-reader"></i> <span>{{ __('The ff Authors') }}</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
                                 @foreach ($resources as $resource)
-                                    <li><a href="{{ route('resource.show', ['slug' => $resource->slug]) }}">{{ $resource->title }}</a></li>    
+                                    <li><a href="https://www.youtube.com/{{ $resource->author }}">{{ $resource->author }}</a></li>        
                                 @endforeach
                             </ul>
                         </li>
