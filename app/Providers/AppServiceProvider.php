@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\URL;
 use App\Models\Resource;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -21,7 +22,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // View::share('resources', Resource::all());
+
+        if($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
+
+        View::share('resources', Resource::all());
         View::share('user', auth()->user());
     }
 }
