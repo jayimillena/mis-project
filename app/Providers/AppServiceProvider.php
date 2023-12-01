@@ -27,6 +27,10 @@ class AppServiceProvider extends ServiceProvider
             URL::forceScheme('https');
         }
 
+        if($this->app->environment('local')) {
+            URL::forceScheme('http');
+        }
+
         View::share('resources', Resource::all());
         View::share('user', auth()->user());
     }
