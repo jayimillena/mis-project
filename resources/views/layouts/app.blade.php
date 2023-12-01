@@ -127,9 +127,9 @@
                             <a href="#"><i class="fas fa-book-reader"></i> <span>{{ __('The ff Authors') }}</span> <span
                                     class="menu-arrow"></span></a>
                             <ul>
-                                {{-- @foreach ($resources as $resource)
+                                @foreach ($resources as $resource)
                                     <li><a href="https://www.youtube.com/{{ $resource->author }}">{{ $resource->author }}</a></li>        
-                                @endforeach --}}
+                                @endforeach
                             </ul>
                         </li>
                     </ul>
