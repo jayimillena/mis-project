@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share('resources', Resource::all());
+        // View::share('resources', Resource::all());
         View::share('user', auth()->user());
     }
 }
