@@ -1,5 +1,8 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+<div class="bg-white p-6 rounded-lg shadow-md mb-3">
+  This project is made by BSCS 2 of CCDI College students and various contributors to educate the young minds, this is for everyone.
+</div>
 
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
   @foreach($resources as $resource) 
     <div class="bg-white p-6 rounded-lg shadow-md">
       <h2 class="text-xl font-semibold mb-2">{{ $resource->title }}</h2> 
